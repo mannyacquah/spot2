@@ -361,6 +361,10 @@ class Query implements \Countable, \IteratorAggregate, \ArrayAccess, \JsonSerial
                 case ':like':
                     $operator = "LIKE";
                     break;
+                // Case-insensitive LIKE
+                case ':ilike':
+                    $operator = "ILIKE";
+                    break;
                 // FULLTEXT search
                 // MATCH(col) AGAINST(search)
                 case ':fulltext':
